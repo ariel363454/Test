@@ -1,1 +1,10 @@
-
+#include <stdio.h>
+int main()
+{
+int n=7;
+int x, y;
+while(x<=n){
+  while(y)
+x+=2
+}
+}
