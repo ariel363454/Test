@@ -1,11 +1,21 @@
 #include <stdio.h>
 
+
 int main()
 {
     char a[]="ABC123", c;
-    int shift=2, i, j;
+    int shift=2, i=0, j;
     
-    printf("%s\n%d\n", a, shift);
+    if (a[0]=='\0')
+        return 0;
+    printf("初始字串:%s\n位移次數:%d\n位移後字串:", a, shift);
+    while (a[i]!='\0'){
+        i++;
+    }
+    //printf("%d\n",i);
+    while (shift>=i) {
+        shift-=i;
+    }
     for (i=shift;a[i]!='\0';i++) {
         printf("%c",a[i]);
     }
