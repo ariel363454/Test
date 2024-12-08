@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    char a[]="ABC123", c;
+    int shift=2, i, j;
+    
+    printf("%s\n%d\n", a, shift);
+    for (i=shift;a[i]!='\0';i++) {
+        printf("%c",a[i]);
+    }
+    for (i=0;i<shift;i++) {
+        printf("%c",a[i]);
+    }
+
+    return 0;
+}
