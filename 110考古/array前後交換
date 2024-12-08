@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+int main()
+{
+    char a[]="";
+    int n=1;
+    char c=0, d=0;
+    
+    while(a[n+1]!='\0')
+        n++;
+    if (a[0]<='Z'&&'a'<=a[n]) {
+        c=a[0]+32;
+        d=a[n]-32;
+    }
+    else if (a[n]<='Z'&&'a'<=a[0]) {
+        c=a[0]-32;
+        d=a[n]+32;
+    }
+    else {
+        c=a[0];
+        d=a[n];
+    }
+    a[0]=d;
+    a[n]=c;
+    //printf("%d,%d",c,d);
+    printf("%s",a);
+    
+    return 0;
+}
