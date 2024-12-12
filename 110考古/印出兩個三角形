@@ -4,7 +4,7 @@ int main()
 {
     int n=4, i, j;
     for (i=n;i>=1;i--) {
-        if (i!=4) 
+        if (i!=n) 
             printf("%*s",n-i," ");
         for (j=2*i-1;j>=1;j--) {
             printf("*");
@@ -12,7 +12,7 @@ int main()
         printf("\n");
     }
     for (i=2;i<=n;i++) {
-        if (i!=4) 
+        if (i!=n) 
             printf("%*s",n-i," ");
         for (j=2*i-1;j>=1;j--) {
             printf("*");
