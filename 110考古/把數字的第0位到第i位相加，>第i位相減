@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main () {
+  int a=12345678;
+  int i=3, j;
+  for (j=0;a!=0;a/=10) {
+    if (i>=0) {
+        j+=a%10;
+        i--;
+    }else 
+      j-=a%10;
+  }
+  printf("%d",j);
+
+return 0;
+}
