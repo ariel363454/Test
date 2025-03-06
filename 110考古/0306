@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    char a[100000];
+    int n=1;
+    scanf("%s", a);
+    while(a[n]!='\0')
+        n++;
+    for (n;n>=0;n--) {
+        printf("%c",a[n]);
+    }
+    
+    return 0;
+}
