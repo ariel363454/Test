@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int print_space (int space) {
+    printf("%*c", space, ' ');
+}
+int print_num (int num) {
+    printf("%d",num);
+}
+int print_sn (int sn) {
+    if (sn!=1) {
+        printf(" ");
+    }else {
+        printf("\n");
+    }
+}
+int main()
+{
+    int n, x, y;
+    scanf("%d",&n);
+    for (y=1;y<=n;y++) {
+        print_space(n-y+1);
+        for (x=y;x!=0;x--) {
+            print_num(y);
+            print_sn(x);
+        }
+    }
+
+    return 0;
+}
