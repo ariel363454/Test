@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() {
+    FILE* hello= fopen("hello.txt", "w+");
+    fprintf(hello,"hello,B1329023\n");
+    fclose(hello);
+    return 0;
+}
