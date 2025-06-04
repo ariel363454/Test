@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class Clock {
+    public:
+    int c_hours;
+    int c_minutes;
+    int c_seconds;
+    string c_tense;
+    Clock(int x, int y, int z, string s) {
+        c_hours = x;
+        c_minutes = y;
+        c_seconds = z;
+        c_tense = s;
+    }
+    void display() {
+        cout << "Clock = " << c_hours << ":" << c_minutes << ":" << c_seconds << " " << c_tense << endl;
+        return;
+    }
+};
+class CGUClock : public Clock {
+    public:
+    CGUClock(int x, int y, int z, string s) : Clock(x, y, z, s) {
+        if(c_tense=="PM")
+            c_hours +=12; 
+    }
+    void display() {
+        cout << "CGUClock = " << c_hours << "時" << c_minutes << "分" << c_seconds << "秒" << endl;
+        return;
+    }
+};
+int main() {
+    Clock cc(10, 25, 43, "AM");
+    CGUClock cguc(10, 25, 43, "PM");
+    cc.display();
+    cguc.display();
+    
+    return 0;
+}
