@@ -4,7 +4,7 @@ int my_strlen(char* s) {
     if(*s == '\0')
         return 0;
     else
-        return 1 + my_strlen(s+1)
+        return 1 + my_strlen(s+1);
 }
 
 int main() {
