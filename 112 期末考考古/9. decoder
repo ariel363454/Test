@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Decoder {
+    public:
+    string bfdc;
+    string afdc;
+    int i = 0, j = 0, m, n,l=0;
+    Decoder(string s) {
+        bfdc = s;
+    }
+    string get_decode() {
+        for(i = 0;bfdc[i] != '\0';i++) {
+            if(isdigit(bfdc[i])) {
+                n = bfdc[i] - '0';
+                for(n;n > 0;n--) {
+                    for(m = j;m < i;m++){
+                        afdc += bfdc[m];
+                        l++;
+                    }
+                }
+                j = i+1;
+            }
+        }
+        return afdc;
+    }
+};
+
+int main() {
+    Decoder d("A3BB2CCC2");
+    cout << d.get_decode();
+    
+    return 0;
+}
