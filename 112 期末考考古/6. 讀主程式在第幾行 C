@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    FILE* file = fopen("main.c", "r");
+    char line[1000];
+    int n = 0;
+    while(fgets(line, sizeof(line), file) != NULL) {
+        n++;
+        if(strstr(line, "main()") != NULL) {
+            printf("%02d %s", n, line);
+            break;
+        }
+    }
+    fclose(file);
+    return 0;
+}
